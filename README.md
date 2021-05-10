@@ -13,10 +13,10 @@ The following where the requirements I used to design the robot:
 
 The assembled robot fulfills the requirements listed above, but the PID controller requires a lot of tuning to get it to stand upright. Having a larger robot would make tuning the PID control system easier.
 
-The following images depict the blank flamingo PCB and the rev 1 schematic.
+The following images depict the blank flamingo PCB and the rev 2 schematic.
 
 Blank PCB
 ![alt text](https://github.com/DanielDW5555/flamingo/blob/main/photos/PCB.jpg)
 
-Rev 1 schematic
-![alt text](https://github.com/DanielDW5555/flamingo/blob/main/photos/sch.PNG)
+Rev 2 schematic
+![alt text](https://github.com/DanielDW5555/flamingo/blob/Rev2/photos/sch.PNG)
