@@ -6,4 +6,4 @@ Blank PCB
 ![alt text](https://github.com/DanielDW5555/flamingo/blob/main/photos/PCB.jpg)
 
 Schematic
-![alt text](https://github.com/DanielDW5555/flamingo/blob/main/photos/sch.PNG)
+![alt text](https://github.com/DanielDW5555/flamingo/tree/Rev2/photos/sch.PNG)
