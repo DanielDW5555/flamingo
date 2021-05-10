@@ -1,0 +1,30 @@
+16:12:44 **** Incremental Build of configuration Debug for project flamingo ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F334x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:189:35: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  189 |    if(pid_target-pid_target_range < pid_target < pid_target+pid_target_range)
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+../Core/Src/main.c:181:10: warning: unused variable 'gZ' [-Wunused-variable]
+  181 |    float gZ = outZ;
+      |          ^~
+../Core/Src/main.c:126:11: warning: unused variable 'buf' [-Wunused-variable]
+  126 |   uint8_t buf[12];
+      |           ^~~
+arm-none-eabi-gcc -o "flamingo.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\STM32CubeIDE_1.6.0\workspace\flamingo\STM32F334K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="flamingo.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: flamingo.elf
+ 
+arm-none-eabi-objdump -h -S  flamingo.elf  > "flamingo.list"
+arm-none-eabi-objcopy  -O binary  flamingo.elf  "flamingo.bin"
+arm-none-eabi-size   flamingo.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19460	     36	   1892	  21388	   538c	flamingo.elf
+Finished building: default.size.stdout
+ 
+Finished building: flamingo.bin
+ 
+Finished building: flamingo.list
+ 
+
+16:12:46 Build Finished. 0 errors, 3 warnings. (took 1s.16ms)
+

@@ -1,0 +1,1550 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Flamingo (Working Title)"
+Date "2021-03-25"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L customIC:LIS3LV02DLTR U2
+U 1 1 605EBAF8
+P 3150 1100
+F 0 "U2" H 3150 1165 50  0000 C CNN
+F 1 "LIS3LV02DLTR" H 3150 1074 50  0000 C CNN
+F 2 "STMDownloads:LIS3LV02DL" H 3150 1000 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/group2/d8/cc/de/55/c6/4d/47/15/CD00091417/files/CD00091417.pdf/jcr:content/translations/en.CD00091417.pdf" H 3150 1000 50  0001 C CNN
+F 4 "497-8415-2-ND" H 3150 1100 50  0001 C CNN "Digikey"
+	1    3150 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L customIC:DRV8876NPWPT U3
+U 1 1 605F6D49
+P 7850 950
+F 0 "U3" H 7850 1015 50  0000 C CNN
+F 1 "DRV8876NPWPT" H 7850 924 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16-1EP_4.4x5mm_P0.65mm" H 7850 950 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/drv8876n.pdf?ts=1616636876545&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FDRV8876N" H 7850 950 50  0001 C CNN
+F 4 "296-DRV8876NPWPTCT-ND" H 7850 950 50  0001 C CNN "Digikey"
+	1    7850 950 
+	1    0    0    -1  
+$EndComp
+Text GLabel 7100 3550 0    50   Input ~ 0
+PA0_TIM2CH1
+Wire Wire Line
+	3900 1600 4150 1600
+Text GLabel 4150 1600 2    50   Input ~ 0
+PB7_I2C1_SDA
+Wire Wire Line
+	3900 1700 4150 1700
+Text GLabel 4150 1700 2    50   Input ~ 0
+PA15_I2C1_SCL
+Text GLabel 7100 1650 0    50   Input ~ 0
+PA4_PHIN2
+Text GLabel 7100 1750 0    50   Input ~ 0
+PA3_nSLEEP
+Text GLabel 8850 1150 2    50   Input ~ 0
+PA2_nFAULT
+$Comp
+L Device:R R300
+U 1 1 605EC00F
+P 8600 1000
+F 0 "R300" H 8670 1046 50  0000 L CNN
+F 1 "10k" H 8670 955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8530 1000 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8600 1000 50  0001 C CNN
+F 4 "RMCF0603FT10K0CT-ND" H 8600 1000 50  0001 C CNN "Digikey"
+	1    8600 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 605F03D1
+P 8500 2300
+F 0 "#PWR0101" H 8500 2050 50  0001 C CNN
+F 1 "GND" H 8505 2127 50  0000 C CNN
+F 2 "" H 8500 2300 50  0001 C CNN
+F 3 "" H 8500 2300 50  0001 C CNN
+	1    8500 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C303
+U 1 1 605FA04F
+P 6600 2000
+F 0 "C303" H 6485 1954 50  0000 R CNN
+F 1 "0.022u" H 6485 2045 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6638 1850 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 6600 2000 50  0001 C CNN
+F 4 "C0603C223K3RAC7411" H 6600 2000 50  0001 C CNN "Digikey"
+	1    6600 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6600 1850 7350 1850
+Wire Wire Line
+	6600 2150 7100 2150
+Wire Wire Line
+	7100 2150 7100 1950
+Wire Wire Line
+	8350 2150 8500 2150
+Wire Wire Line
+	8500 2050 8500 2150
+Wire Wire Line
+	8350 2050 8500 2050
+Wire Wire Line
+	8500 2150 8500 2300
+Connection ~ 8500 2150
+Wire Wire Line
+	7350 1950 7100 1950
+Wire Wire Line
+	7350 2050 7200 2050
+Wire Wire Line
+	7200 2050 7200 2150
+Wire Wire Line
+	7200 2150 7350 2150
+Wire Wire Line
+	7200 2150 7200 2300
+Connection ~ 7200 2150
+$Comp
+L power:GND #PWR0102
+U 1 1 60621AD3
+P 7200 2300
+F 0 "#PWR0102" H 7200 2050 50  0001 C CNN
+F 1 "GND" H 7205 2127 50  0000 C CNN
+F 2 "" H 7200 2300 50  0001 C CNN
+F 3 "" H 7200 2300 50  0001 C CNN
+	1    7200 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 1150 7200 1150
+Wire Wire Line
+	7200 1150 7200 850 
+Wire Wire Line
+	7350 3550 7100 3550
+Wire Wire Line
+	7350 1650 7100 1650
+Wire Wire Line
+	7350 1750 7100 1750
+Wire Wire Line
+	8600 1150 8350 1150
+Wire Wire Line
+	8850 1150 8600 1150
+Wire Wire Line
+	6850 1250 7350 1250
+Wire Wire Line
+	6350 1350 7350 1350
+Wire Wire Line
+	6550 1250 6350 1250
+Wire Wire Line
+	6350 1250 6350 1350
+Connection ~ 6350 1350
+$Comp
+L power:GND #PWR0103
+U 1 1 60635A1E
+P 6100 1650
+F 0 "#PWR0103" H 6100 1400 50  0001 C CNN
+F 1 "GND" H 6105 1477 50  0000 C CNN
+F 2 "" H 6100 1650 50  0001 C CNN
+F 3 "" H 6100 1650 50  0001 C CNN
+	1    6100 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C300
+U 1 1 60638822
+P 5600 1500
+F 0 "C300" H 5715 1546 50  0000 L CNN
+F 1 "22u" H 5715 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5638 1350 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1005_Y5V_SMD.pdf" H 5600 1500 50  0001 C CNN
+F 4 "399-1301-1-ND" H 5600 1500 50  0001 C CNN "Digikey"
+	1    5600 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 60638828
+P 5600 1650
+F 0 "#PWR0104" H 5600 1400 50  0001 C CNN
+F 1 "GND" H 5605 1477 50  0000 C CNN
+F 2 "" H 5600 1650 50  0001 C CNN
+F 3 "" H 5600 1650 50  0001 C CNN
+	1    5600 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 1350 5350 1350
+Wire Wire Line
+	5350 1350 5350 850 
+Connection ~ 5600 1350
+Wire Wire Line
+	8350 1950 8500 1950
+Wire Wire Line
+	8500 1950 8500 2050
+Connection ~ 8500 2050
+Text GLabel 8850 1350 2    50   Input ~ 0
+OUT1_MOTOR1
+Wire Wire Line
+	8350 1350 8850 1350
+Wire Wire Line
+	8350 1450 8850 1450
+Text GLabel 8850 1450 2    50   Input ~ 0
+OUT2_MOTOR1
+$Comp
+L power:VCC #PWR0107
+U 1 1 6064FE7A
+P 7200 850
+F 0 "#PWR0107" H 7200 700 50  0001 C CNN
+F 1 "VCC" H 7215 1023 50  0000 C CNN
+F 2 "" H 7200 850 50  0001 C CNN
+F 3 "" H 7200 850 50  0001 C CNN
+	1    7200 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0108
+U 1 1 606518CF
+P 8600 850
+F 0 "#PWR0108" H 8600 700 50  0001 C CNN
+F 1 "VCC" H 8615 1023 50  0000 C CNN
+F 2 "" H 8600 850 50  0001 C CNN
+F 3 "" H 8600 850 50  0001 C CNN
+	1    8600 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0109
+U 1 1 60653235
+P 5350 850
+F 0 "#PWR0109" H 5350 700 50  0001 C CNN
+F 1 "VCC" H 5365 1023 50  0000 C CNN
+F 2 "" H 5350 850 50  0001 C CNN
+F 3 "" H 5350 850 50  0001 C CNN
+	1    5350 850 
+	1    0    0    -1  
+$EndComp
+Text Notes 1250 7700 0    50   ~ 0
+NOTE\n- VCC is 4.7V straight from a 9V battery\n
+Wire Wire Line
+	3900 2000 4050 2000
+Wire Wire Line
+	4050 2000 4050 2100
+Wire Wire Line
+	3900 2100 4050 2100
+Connection ~ 4050 2100
+Wire Wire Line
+	4050 2100 4050 2200
+Wire Wire Line
+	3900 2200 4050 2200
+Connection ~ 4050 2200
+Wire Wire Line
+	4050 2200 4050 2300
+Wire Wire Line
+	3900 2300 4050 2300
+Connection ~ 4050 2300
+Wire Wire Line
+	4050 2300 4050 2450
+$Comp
+L power:GND #PWR0110
+U 1 1 606598FE
+P 4050 2450
+F 0 "#PWR0110" H 4050 2200 50  0001 C CNN
+F 1 "GND" H 4055 2277 50  0000 C CNN
+F 2 "" H 4050 2450 50  0001 C CNN
+F 3 "" H 4050 2450 50  0001 C CNN
+	1    4050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1700 2250 1700
+Wire Wire Line
+	2250 1700 2250 1600
+Wire Wire Line
+	2400 1300 2250 1300
+Wire Wire Line
+	2400 1400 2250 1400
+Connection ~ 2250 1400
+Wire Wire Line
+	2250 1400 2250 1300
+Wire Wire Line
+	2400 1500 2250 1500
+Connection ~ 2250 1500
+Wire Wire Line
+	2250 1500 2250 1400
+Wire Wire Line
+	2400 1600 2250 1600
+Connection ~ 2250 1600
+Wire Wire Line
+	2250 1600 2250 1500
+$Comp
+L customIC:DRV8876NPWPT U4
+U 1 1 60679D21
+P 7850 2950
+F 0 "U4" H 7850 3015 50  0000 C CNN
+F 1 "DRV8876NPWPT" H 7850 2924 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16-1EP_4.4x5mm_P0.65mm" H 7850 2950 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/drv8876n.pdf?ts=1616636876545&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FDRV8876N" H 7850 2950 50  0001 C CNN
+F 4 "296-DRV8876NPWPTCT-ND" H 7850 2950 50  0001 C CNN "Digikey"
+	1    7850 2950
+	1    0    0    -1  
+$EndComp
+Text GLabel 7100 1550 0    50   Input ~ 0
+PA1_TIM2CH2
+Text GLabel 7100 3650 0    50   Input ~ 0
+PA7_PHIN2
+Text GLabel 7100 3750 0    50   Input ~ 0
+PA6_nSLEEP
+Text GLabel 8850 3150 2    50   Input ~ 0
+PA5_nFAULT
+$Comp
+L power:GND #PWR0112
+U 1 1 60679D31
+P 8500 4300
+F 0 "#PWR0112" H 8500 4050 50  0001 C CNN
+F 1 "GND" H 8505 4127 50  0000 C CNN
+F 2 "" H 8500 4300 50  0001 C CNN
+F 3 "" H 8500 4300 50  0001 C CNN
+	1    8500 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3850 7350 3850
+Wire Wire Line
+	6600 4150 7100 4150
+Wire Wire Line
+	7100 4150 7100 3950
+Wire Wire Line
+	8350 4150 8500 4150
+Wire Wire Line
+	8500 4050 8500 4150
+Wire Wire Line
+	8350 4050 8500 4050
+Wire Wire Line
+	8500 4150 8500 4300
+Connection ~ 8500 4150
+Wire Wire Line
+	7350 3950 7100 3950
+Wire Wire Line
+	7350 4050 7200 4050
+Wire Wire Line
+	7200 4050 7200 4150
+Wire Wire Line
+	7200 4150 7350 4150
+Wire Wire Line
+	7200 4150 7200 4300
+Connection ~ 7200 4150
+$Comp
+L power:GND #PWR0113
+U 1 1 60679D4B
+P 7200 4300
+F 0 "#PWR0113" H 7200 4050 50  0001 C CNN
+F 1 "GND" H 7205 4127 50  0000 C CNN
+F 2 "" H 7200 4300 50  0001 C CNN
+F 3 "" H 7200 4300 50  0001 C CNN
+	1    7200 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3150 7200 3150
+Wire Wire Line
+	7200 3150 7200 2850
+Wire Wire Line
+	7350 1550 7100 1550
+Wire Wire Line
+	7350 3650 7100 3650
+Wire Wire Line
+	7350 3750 7100 3750
+Wire Wire Line
+	6850 3250 7350 3250
+Wire Wire Line
+	6350 3350 7350 3350
+Wire Wire Line
+	6550 3250 6350 3250
+Wire Wire Line
+	6350 3250 6350 3350
+Connection ~ 6350 3350
+$Comp
+L power:GND #PWR0114
+U 1 1 60679D6A
+P 6100 3650
+F 0 "#PWR0114" H 6100 3400 50  0001 C CNN
+F 1 "GND" H 6105 3477 50  0000 C CNN
+F 2 "" H 6100 3650 50  0001 C CNN
+F 3 "" H 6100 3650 50  0001 C CNN
+	1    6100 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C400
+U 1 1 60679D70
+P 5600 3500
+F 0 "C400" H 5715 3546 50  0000 L CNN
+F 1 "22u" H 5715 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5638 3350 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1005_Y5V_SMD.pdf" H 5600 3500 50  0001 C CNN
+F 4 "399-1301-1-ND" H 5600 3500 50  0001 C CNN "Digikey"
+	1    5600 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 60679D76
+P 5600 3650
+F 0 "#PWR0115" H 5600 3400 50  0001 C CNN
+F 1 "GND" H 5605 3477 50  0000 C CNN
+F 2 "" H 5600 3650 50  0001 C CNN
+F 3 "" H 5600 3650 50  0001 C CNN
+	1    5600 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3350 5350 3350
+Wire Wire Line
+	5350 3350 5350 2850
+Connection ~ 5600 3350
+Wire Wire Line
+	8350 3950 8500 3950
+Wire Wire Line
+	8500 3950 8500 4050
+Connection ~ 8500 4050
+Text GLabel 8850 3350 2    50   Input ~ 0
+OUT1_MOTOR2
+Wire Wire Line
+	8350 3350 8850 3350
+Wire Wire Line
+	8350 3450 8850 3450
+Text GLabel 8850 3450 2    50   Input ~ 0
+OUT2_MOTOR2
+$Comp
+L power:VCC #PWR0116
+U 1 1 60679D87
+P 7200 2850
+F 0 "#PWR0116" H 7200 2700 50  0001 C CNN
+F 1 "VCC" H 7215 3023 50  0000 C CNN
+F 2 "" H 7200 2850 50  0001 C CNN
+F 3 "" H 7200 2850 50  0001 C CNN
+	1    7200 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0117
+U 1 1 60679D8D
+P 8600 2850
+F 0 "#PWR0117" H 8600 2700 50  0001 C CNN
+F 1 "VCC" H 8615 3023 50  0000 C CNN
+F 2 "" H 8600 2850 50  0001 C CNN
+F 3 "" H 8600 2850 50  0001 C CNN
+	1    8600 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0118
+U 1 1 60679D93
+P 5350 2850
+F 0 "#PWR0118" H 5350 2700 50  0001 C CNN
+F 1 "VCC" H 5365 3023 50  0000 C CNN
+F 2 "" H 5350 2850 50  0001 C CNN
+F 3 "" H 5350 2850 50  0001 C CNN
+	1    5350 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 1300 4150 1300
+Text GLabel 4150 1300 2    50   Input ~ 0
+PB0_RDY_INT
+Text GLabel 4150 1400 2    50   Input ~ 0
+PB1_SDO
+Wire Wire Line
+	3900 1400 4150 1400
+Wire Wire Line
+	2400 2100 2150 2100
+Text GLabel 2150 2100 0    50   Input ~ 0
+PB2_CS
+$Comp
+L customIC:LP2985AIM5-3.3_NOPB U5
+U 1 1 606044DA
+P 2100 6300
+F 0 "U5" H 2100 6415 50  0000 C CNN
+F 1 "LP2985AIM5-3.3_NOPB" H 2100 6324 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 2100 6300 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lp2985-n.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1616878565202" H 2100 6300 50  0001 C CNN
+F 4 "LP2985AIM5-3.3/NOPBTR-ND" H 2100 6300 50  0001 C CNN "Digikey"
+	1    2100 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 8600 1150
+$Comp
+L power:VCC #PWR0119
+U 1 1 606258BD
+P 1350 6300
+F 0 "#PWR0119" H 1350 6150 50  0001 C CNN
+F 1 "VCC" H 1365 6473 50  0000 C CNN
+F 2 "" H 1350 6300 50  0001 C CNN
+F 3 "" H 1350 6300 50  0001 C CNN
+	1    1350 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C500
+U 1 1 6062A844
+P 1350 6800
+F 0 "C500" H 1465 6846 50  0000 L CNN
+F 1 "1u" H 1465 6755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1388 6650 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 1350 6800 50  0001 C CNN
+F 4 "399-C0603C105K4RAC7411CT-ND" H 1350 6800 50  0001 C CNN "Digikey"
+	1    1350 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 6450 1350 6300
+Wire Wire Line
+	1350 6450 1350 6650
+$Comp
+L power:GND #PWR0120
+U 1 1 6064BE2A
+P 1350 7250
+F 0 "#PWR0120" H 1350 7000 50  0001 C CNN
+F 1 "GND" H 1355 7077 50  0000 C CNN
+F 2 "" H 1350 7250 50  0001 C CNN
+F 3 "" H 1350 7250 50  0001 C CNN
+	1    1350 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 6450 1600 6450
+Wire Wire Line
+	1350 6650 1600 6650
+Connection ~ 1350 6650
+Wire Wire Line
+	1350 6950 1600 6950
+Connection ~ 1350 6950
+Wire Wire Line
+	2600 6450 2850 6450
+$Comp
+L Device:C C501
+U 1 1 6066A00D
+P 2850 6600
+F 0 "C501" H 2965 6646 50  0000 L CNN
+F 1 "2.2u" H 2965 6555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2888 6450 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf" H 2850 6600 50  0001 C CNN
+F 4 "399-7886-1-ND" H 2850 6600 50  0001 C CNN "Digikey"
+	1    2850 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 6950 2850 6950
+Wire Wire Line
+	2850 6750 2850 6950
+$Comp
+L Device:C C502
+U 1 1 60678312
+P 2850 7100
+F 0 "C502" H 2965 7146 50  0000 L CNN
+F 1 "0.01u" H 2965 7055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2888 6950 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 2850 7100 50  0001 C CNN
+F 4 "399-C0603C103M5RAC7411CT-ND" H 2850 7100 50  0001 C CNN "Digikey"
+	1    2850 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 6067D201
+P 2850 7250
+F 0 "#PWR0121" H 2850 7000 50  0001 C CNN
+F 1 "GND" H 2855 7077 50  0000 C CNN
+F 2 "" H 2850 7250 50  0001 C CNN
+F 3 "" H 2850 7250 50  0001 C CNN
+	1    2850 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 6950 1350 7250
+$Comp
+L power:+3.3V #PWR0122
+U 1 1 60694D3A
+P 2850 6300
+F 0 "#PWR0122" H 2850 6150 50  0001 C CNN
+F 1 "+3.3V" H 2865 6473 50  0000 C CNN
+F 2 "" H 2850 6300 50  0001 C CNN
+F 3 "" H 2850 6300 50  0001 C CNN
+	1    2850 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 1350 6450
+Wire Wire Line
+	2850 6450 2850 6300
+Connection ~ 2850 6450
+Connection ~ 2850 6950
+$Comp
+L Device:LED D0
+U 1 1 6070292C
+P 10400 1650
+F 0 "D0" V 10439 1532 50  0000 R CNN
+F 1 "LED" V 10348 1532 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10400 1650 50  0001 C CNN
+F 3 "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608ZGC.pdf" H 10400 1650 50  0001 C CNN
+F 4 "754-1126-1-ND" V 10400 1650 50  0001 C CNN "Digikey"
+	1    10400 1650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 10100 1000 0    50   Input ~ 0
+PA2_nFAULT
+$Comp
+L power:GND #PWR0124
+U 1 1 6071AEDD
+P 10400 1800
+F 0 "#PWR0124" H 10400 1550 50  0001 C CNN
+F 1 "GND" H 10405 1627 50  0000 C CNN
+F 2 "" H 10400 1800 50  0001 C CNN
+F 3 "" H 10400 1800 50  0001 C CNN
+	1    10400 1800
+	1    0    0    -1  
+$EndComp
+Text GLabel 10100 2500 0    50   Input ~ 0
+PA5_nFAULT
+$Comp
+L power:GND #PWR0126
+U 1 1 6074A248
+P 10400 3300
+F 0 "#PWR0126" H 10400 3050 50  0001 C CNN
+F 1 "GND" H 10405 3127 50  0000 C CNN
+F 2 "" H 10400 3300 50  0001 C CNN
+F 3 "" H 10400 3300 50  0001 C CNN
+	1    10400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0128
+U 1 1 60765C48
+P 10400 5900
+F 0 "#PWR0128" H 10400 5650 50  0001 C CNN
+F 1 "GND" H 10405 5727 50  0000 C CNN
+F 2 "" H 10400 5900 50  0001 C CNN
+F 3 "" H 10400 5900 50  0001 C CNN
+	1    10400 5900
+	1    0    0    -1  
+$EndComp
+Text GLabel 10100 4000 0    50   Input ~ 0
+PF0_STATUSLED
+$Comp
+L power:GND #PWR0131
+U 1 1 607B48CA
+P 10400 4800
+F 0 "#PWR0131" H 10400 4550 50  0001 C CNN
+F 1 "GND" H 10405 4627 50  0000 C CNN
+F 2 "" H 10400 4800 50  0001 C CNN
+F 3 "" H 10400 4800 50  0001 C CNN
+	1    10400 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J1
+U 1 1 6061C717
+P 8850 5750
+F 0 "J1" H 8900 5425 50  0000 C CNN
+F 1 "SWD" H 8900 5516 50  0000 C CNN
+F 2 "Connector_PinSocket_1.27mm:PinSocket_2x03_P1.27mm_Vertical" H 8850 5750 50  0001 C CNN
+F 3 "https://s3.amazonaws.com/catalogspreads-pdf/PAGE94-95%20.050%20MALE%20HDR%20ST%20RA%20SMT.pdf" H 8850 5750 50  0001 C CNN
+F 4 "GRPB032VWVN-RC" H 8850 5750 50  0001 C CNN "Digikey"
+	1    8850 5750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9050 5850 9300 5850
+Wire Wire Line
+	9050 5750 9300 5750
+Wire Wire Line
+	8550 5650 8300 5650
+Wire Wire Line
+	8550 5850 8400 5850
+Wire Wire Line
+	8400 5850 8400 6000
+NoConn ~ 8550 5750
+Text GLabel 9300 5850 2    50   Input ~ 0
+PA13_SWDAT
+Text GLabel 9300 5750 2    50   Input ~ 0
+PA14_SWCLK
+Wire Wire Line
+	9050 5650 9200 5650
+Wire Wire Line
+	9200 5650 9200 5500
+$Comp
+L power:+3.3V #PWR0132
+U 1 1 60646CAC
+P 9200 5500
+F 0 "#PWR0132" H 9200 5350 50  0001 C CNN
+F 1 "+3.3V" H 9215 5673 50  0000 C CNN
+F 2 "" H 9200 5500 50  0001 C CNN
+F 3 "" H 9200 5500 50  0001 C CNN
+	1    9200 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0133
+U 1 1 60647C61
+P 8400 6000
+F 0 "#PWR0133" H 8400 5750 50  0001 C CNN
+F 1 "GND" H 8405 5827 50  0000 C CNN
+F 2 "" H 8400 6000 50  0001 C CNN
+F 3 "" H 8400 6000 50  0001 C CNN
+	1    8400 6000
+	1    0    0    -1  
+$EndComp
+Text GLabel 8300 5650 0    50   Input ~ 0
+RST_SW
+Wire Wire Line
+	4750 6950 4500 6950
+$Comp
+L power:GND #PWR0134
+U 1 1 606EA82F
+P 4750 7350
+F 0 "#PWR0134" H 4750 7100 50  0001 C CNN
+F 1 "GND" H 4755 7177 50  0000 C CNN
+F 2 "" H 4750 7350 50  0001 C CNN
+F 3 "" H 4750 7350 50  0001 C CNN
+	1    4750 7350
+	1    0    0    -1  
+$EndComp
+Text GLabel 4500 6950 0    50   Input ~ 0
+RST_SW
+Wire Wire Line
+	5750 6950 5500 6950
+$Comp
+L power:+3.3V #PWR0135
+U 1 1 606F8DE7
+P 5750 6650
+F 0 "#PWR0135" H 5750 6500 50  0001 C CNN
+F 1 "+3.3V" H 5765 6823 50  0000 C CNN
+F 2 "" H 5750 6650 50  0001 C CNN
+F 3 "" H 5750 6650 50  0001 C CNN
+	1    5750 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0136
+U 1 1 606F8DF4
+P 5750 7350
+F 0 "#PWR0136" H 5750 7100 50  0001 C CNN
+F 1 "GND" H 5755 7177 50  0000 C CNN
+F 2 "" H 5750 7350 50  0001 C CNN
+F 3 "" H 5750 7350 50  0001 C CNN
+	1    5750 7350
+	1    0    0    -1  
+$EndComp
+Text GLabel 5500 6950 0    50   Input ~ 0
+PB4_SW
+$Comp
+L Device:Q_PMOS_GSD Q1
+U 1 1 60878687
+P 10300 2500
+F 0 "Q1" H 10505 2546 50  0000 L CNN
+F 1 "Q_PMOS_GSD" H 10505 2455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10500 2600 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30149.pdf" H 10300 2500 50  0001 C CNN
+F 4 "BSS84-FDICT-ND" H 10300 2500 50  0001 C CNN "Digikey"
+	1    10300 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PMOS_GSD Q2
+U 1 1 6088535B
+P 10300 4000
+F 0 "Q2" H 10505 4046 50  0000 L CNN
+F 1 "Q_PMOS_GSD" H 10505 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10500 4100 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30149.pdf" H 10300 4000 50  0001 C CNN
+F 4 "BSS84-FDICT-ND" H 10300 4000 50  0001 C CNN "Digikey"
+	1    10300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW0
+U 1 1 6065C9F6
+P 4750 7150
+F 0 "SW0" V 4704 7248 50  0000 L CNN
+F 1 "SW" V 4795 7248 50  0000 L CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 4750 7150 50  0001 C CNN
+F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" H 4750 7150 50  0001 C CNN
+F 4 "SW1020CT-ND" V 4750 7150 50  0001 C CNN "Digikey"
+	1    4750 7150
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 60892C2D
+P 5750 7150
+F 0 "SW1" V 5704 7248 50  0000 L CNN
+F 1 "SW" V 5795 7248 50  0000 L CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 5750 7150 50  0001 C CNN
+F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" H 5750 7150 50  0001 C CNN
+F 4 "SW1020CT-ND" V 5750 7150 50  0001 C CNN "Digikey"
+	1    5750 7150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0123
+U 1 1 608C183F
+P 10400 800
+F 0 "#PWR0123" H 10400 650 50  0001 C CNN
+F 1 "+3.3V" H 10415 973 50  0000 C CNN
+F 2 "" H 10400 800 50  0001 C CNN
+F 3 "" H 10400 800 50  0001 C CNN
+	1    10400 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0125
+U 1 1 608C77CB
+P 10400 2300
+F 0 "#PWR0125" H 10400 2150 50  0001 C CNN
+F 1 "+3.3V" H 10415 2473 50  0000 C CNN
+F 2 "" H 10400 2300 50  0001 C CNN
+F 3 "" H 10400 2300 50  0001 C CNN
+	1    10400 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0127
+U 1 1 608CD613
+P 10400 5300
+F 0 "#PWR0127" H 10400 5150 50  0001 C CNN
+F 1 "+3.3V" H 10415 5473 50  0000 C CNN
+F 2 "" H 10400 5300 50  0001 C CNN
+F 3 "" H 10400 5300 50  0001 C CNN
+	1    10400 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0130
+U 1 1 608D336E
+P 10400 3800
+F 0 "#PWR0130" H 10400 3650 50  0001 C CNN
+F 1 "+3.3V" H 10415 3973 50  0000 C CNN
+F 2 "" H 10400 3800 50  0001 C CNN
+F 3 "" H 10400 3800 50  0001 C CNN
+	1    10400 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 608E0AC6
+P 10400 3150
+F 0 "D1" V 10439 3032 50  0000 R CNN
+F 1 "LED" V 10348 3032 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10400 3150 50  0001 C CNN
+F 3 "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608ZGC.pdf" H 10400 3150 50  0001 C CNN
+F 4 "754-1126-1-ND" V 10400 3150 50  0001 C CNN "Digikey"
+	1    10400 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 608E6E60
+P 10400 5750
+F 0 "D2" V 10439 5632 50  0000 R CNN
+F 1 "LED" V 10348 5632 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10400 5750 50  0001 C CNN
+F 3 "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608ZGC.pdf" H 10400 5750 50  0001 C CNN
+F 4 "754-1126-1-ND" V 10400 5750 50  0001 C CNN "Digikey"
+	1    10400 5750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 608ED812
+P 10400 4650
+F 0 "D3" V 10439 4532 50  0000 R CNN
+F 1 "LED" V 10348 4532 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 10400 4650 50  0001 C CNN
+F 3 "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608ZGC.pdf" H 10400 4650 50  0001 C CNN
+F 4 "754-1126-1-ND" V 10400 4650 50  0001 C CNN "Digikey"
+	1    10400 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C301
+U 1 1 60921BEF
+P 6100 1500
+F 0 "C301" H 6215 1546 50  0000 L CNN
+F 1 "0.1u" H 6215 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6138 1350 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1090_X7R_ESD.pdf" H 6100 1500 50  0001 C CNN
+F 4 "399-C0603C104K4REC7867CT-ND" H 6100 1500 50  0001 C CNN "Digikey"
+	1    6100 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 1350 6100 1350
+Connection ~ 6100 1350
+Wire Wire Line
+	6100 1350 6350 1350
+$Comp
+L Device:C C302
+U 1 1 6092DE19
+P 6700 1250
+F 0 "C302" V 6448 1250 50  0000 C CNN
+F 1 "0.1u" V 6539 1250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6738 1100 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1090_X7R_ESD.pdf" H 6700 1250 50  0001 C CNN
+F 4 "399-C0603C104K4REC7867CT-ND" H 6700 1250 50  0001 C CNN "Digikey"
+	1    6700 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C401
+U 1 1 6093FC9E
+P 6100 3500
+F 0 "C401" H 6215 3546 50  0000 L CNN
+F 1 "0.1u" H 6215 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6138 3350 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1090_X7R_ESD.pdf" H 6100 3500 50  0001 C CNN
+F 4 "399-C0603C104K4REC7867CT-ND" H 6100 3500 50  0001 C CNN "Digikey"
+	1    6100 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3350 6100 3350
+Connection ~ 6100 3350
+Wire Wire Line
+	6100 3350 6350 3350
+$Comp
+L Device:C C402
+U 1 1 609524B0
+P 6700 3250
+F 0 "C402" V 6952 3250 50  0000 C CNN
+F 1 "0.1u" V 6861 3250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6738 3100 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1090_X7R_ESD.pdf" H 6700 3250 50  0001 C CNN
+F 4 "399-C0603C104K4REC7867CT-ND" H 6700 3250 50  0001 C CNN "Digikey"
+	1    6700 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C403
+U 1 1 6095B352
+P 6600 4000
+F 0 "C403" H 6485 3954 50  0000 R CNN
+F 1 "0.022u" H 6485 4045 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6638 3850 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 6600 4000 50  0001 C CNN
+F 4 "C0603C223K3RAC7411" H 6600 4000 50  0001 C CNN "Digikey"
+	1    6600 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R0
+U 1 1 60968C92
+P 10400 1350
+F 0 "R0" H 10470 1396 50  0000 L CNN
+F 1 "10k" H 10470 1305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 10330 1350 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10400 1350 50  0001 C CNN
+F 4 "RMCF0603FT10K0CT-ND" H 10400 1350 50  0001 C CNN "Digikey"
+	1    10400 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60974EA9
+P 10400 2850
+F 0 "R1" H 10470 2896 50  0000 L CNN
+F 1 "10k" H 10470 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 10330 2850 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10400 2850 50  0001 C CNN
+F 4 "RMCF0603FT10K0CT-ND" H 10400 2850 50  0001 C CNN "Digikey"
+	1    10400 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 609813BB
+P 10400 5450
+F 0 "R2" H 10470 5496 50  0000 L CNN
+F 1 "10k" H 10470 5405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 10330 5450 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10400 5450 50  0001 C CNN
+F 4 "RMCF0603FT10K0CT-ND" H 10400 5450 50  0001 C CNN "Digikey"
+	1    10400 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 6098764C
+P 10400 4350
+F 0 "R3" H 10470 4396 50  0000 L CNN
+F 1 "10k" H 10470 4305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 10330 4350 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 10400 4350 50  0001 C CNN
+F 4 "RMCF0603FT10K0CT-ND" H 10400 4350 50  0001 C CNN "Digikey"
+	1    10400 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 6098E0B1
+P 5750 6800
+F 0 "R4" H 5820 6846 50  0000 L CNN
+F 1 "10k" H 5820 6755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5680 6800 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 5750 6800 50  0001 C CNN
+F 4 "RMCF0603FT10K0CT-ND" H 5750 6800 50  0001 C CNN "Digikey"
+	1    5750 6800
+	1    0    0    -1  
+$EndComp
+Connection ~ 5750 6950
+$Comp
+L Device:R R400
+U 1 1 609949A8
+P 8600 3000
+F 0 "R400" H 8670 3046 50  0000 L CNN
+F 1 "10k" H 8670 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8530 3000 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 8600 3000 50  0001 C CNN
+F 4 "RMCF0603FT10K0CT-ND" H 8600 3000 50  0001 C CNN "Digikey"
+	1    8600 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 3150 8600 3150
+Connection ~ 8600 3150
+Wire Wire Line
+	8600 3150 8850 3150
+Connection ~ 1400 3500
+Connection ~ 1900 3500
+Wire Wire Line
+	1900 3500 1400 3500
+Wire Wire Line
+	2250 3500 1900 3500
+$Comp
+L power:GND #PWR0111
+U 1 1 6066F6C3
+P 1400 3800
+F 0 "#PWR0111" H 1400 3550 50  0001 C CNN
+F 1 "GND" H 1405 3627 50  0000 C CNN
+F 2 "" H 1400 3800 50  0001 C CNN
+F 3 "" H 1400 3800 50  0001 C CNN
+	1    1400 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C102
+U 1 1 6066F6BD
+P 1400 3650
+F 0 "C102" H 1515 3696 50  0000 L CNN
+F 1 "1u" H 1515 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1438 3500 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 1400 3650 50  0001 C CNN
+F 4 "399-C0603C105K4RAC7411CT-ND" H 1400 3650 50  0001 C CNN "Digikey"
+	1    1400 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0129
+U 1 1 6064CCFE
+P 1900 3800
+F 0 "#PWR0129" H 1900 3550 50  0001 C CNN
+F 1 "GND" H 1905 3627 50  0000 C CNN
+F 2 "" H 1900 3800 50  0001 C CNN
+F 3 "" H 1900 3800 50  0001 C CNN
+	1    1900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C103
+U 1 1 60646D92
+P 1900 3650
+F 0 "C103" H 2015 3696 50  0000 L CNN
+F 1 "1u" H 2015 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1938 3500 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 1900 3650 50  0001 C CNN
+F 4 "399-C0603C105K4RAC7411CT-ND" H 1900 3650 50  0001 C CNN "Digikey"
+	1    1900 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 5250 2400 5250
+Text GLabel 2100 5250 0    50   Input ~ 0
+PB7_I2C1_SDA
+Connection ~ 1150 4050
+Wire Wire Line
+	900  4050 1150 4050
+$Comp
+L Device:C C100
+U 1 1 60900C10
+P 1150 4200
+F 0 "C100" H 1265 4246 50  0000 L CNN
+F 1 "0.1u" H 1265 4155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1188 4050 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1090_X7R_ESD.pdf" H 1150 4200 50  0001 C CNN
+F 4 "399-C0603C104K4REC7867CT-ND" H 1150 4200 50  0001 C CNN "Digikey"
+	1    1150 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0137
+U 1 1 60752604
+P 1150 4350
+F 0 "#PWR0137" H 1150 4100 50  0001 C CNN
+F 1 "GND" H 1155 4177 50  0000 C CNN
+F 2 "" H 1150 4350 50  0001 C CNN
+F 3 "" H 1150 4350 50  0001 C CNN
+	1    1150 4350
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 4800 2    50   Input ~ 0
+PB4_SW
+Wire Wire Line
+	4400 4800 4650 4800
+Text GLabel 900  4050 0    50   Input ~ 0
+RST_SW
+Wire Wire Line
+	2400 4350 2150 4350
+Text GLabel 2150 4350 0    50   Input ~ 0
+PF0_STATUSLED
+Connection ~ 2250 3500
+Text GLabel 4650 4700 2    50   Input ~ 0
+PA8_MCO
+Wire Wire Line
+	4400 4700 4650 4700
+Wire Wire Line
+	2150 5050 2400 5050
+Text GLabel 2150 5050 0    50   Input ~ 0
+PB2_CS
+Text GLabel 2150 4750 0    50   Input ~ 0
+PB1_SDO
+Wire Wire Line
+	2400 4750 2150 4750
+Text GLabel 2150 4650 0    50   Input ~ 0
+PB0_RDY_INT
+Wire Wire Line
+	2400 4650 2150 4650
+Connection ~ 4550 5400
+Wire Wire Line
+	4550 5300 4550 5400
+Wire Wire Line
+	4400 5300 4550 5300
+$Comp
+L power:GND #PWR0106
+U 1 1 60648DCE
+P 4550 5550
+F 0 "#PWR0106" H 4550 5300 50  0001 C CNN
+F 1 "GND" H 4555 5377 50  0000 C CNN
+F 2 "" H 4550 5550 50  0001 C CNN
+F 3 "" H 4550 5550 50  0001 C CNN
+	1    4550 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 5400 4550 5550
+Wire Wire Line
+	4400 5400 4550 5400
+Connection ~ 2250 3600
+Wire Wire Line
+	2250 3700 2250 3600
+Wire Wire Line
+	2400 3700 2250 3700
+Wire Wire Line
+	2250 3600 2250 3500
+Wire Wire Line
+	2400 3600 2250 3600
+Wire Wire Line
+	900  3500 900  3350
+Wire Wire Line
+	2400 3500 2250 3500
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 60643EE2
+P 900 3350
+F 0 "#PWR0105" H 900 3200 50  0001 C CNN
+F 1 "+3.3V" H 915 3523 50  0000 C CNN
+F 2 "" H 900 3350 50  0001 C CNN
+F 3 "" H 900 3350 50  0001 C CNN
+	1    900  3350
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 4400 2    50   Input ~ 0
+PA5_nFAULT
+Text GLabel 4650 4500 2    50   Input ~ 0
+PA6_nSLEEP
+Text GLabel 4650 4600 2    50   Input ~ 0
+PA7_PHIN2
+Text GLabel 4650 4100 2    50   Input ~ 0
+PA2_nFAULT
+Text GLabel 4650 4200 2    50   Input ~ 0
+PA3_nSLEEP
+Text GLabel 4650 4300 2    50   Input ~ 0
+PA4_PHIN2
+Wire Wire Line
+	4400 4600 4650 4600
+Wire Wire Line
+	4400 4500 4650 4500
+Wire Wire Line
+	4400 4400 4650 4400
+Wire Wire Line
+	4400 4300 4650 4300
+Wire Wire Line
+	4400 4200 4650 4200
+Wire Wire Line
+	4400 4100 4650 4100
+Text GLabel 4650 3500 2    50   Input ~ 0
+PA13_SWDAT
+Wire Wire Line
+	4400 3500 4650 3500
+Text GLabel 4650 3700 2    50   Input ~ 0
+PA15_I2C1_SCL
+Wire Wire Line
+	4400 3700 4650 3700
+Text GLabel 4650 3600 2    50   Input ~ 0
+PA14_SWCLK
+Wire Wire Line
+	4400 3600 4650 3600
+Wire Wire Line
+	4400 3900 4650 3900
+Text GLabel 4650 3900 2    50   Input ~ 0
+PA0_TIM2CH1
+Wire Wire Line
+	4400 4000 4650 4000
+Text GLabel 4650 4000 2    50   Input ~ 0
+PA1_TIM2CH2
+$Comp
+L customIC:STM32F334K8T6TR U1
+U 1 1 605DF860
+P 3400 3300
+F 0 "U1" H 3400 3365 50  0000 C CNN
+F 1 "STM32F334K8T6TR" H 3400 3274 50  0000 C CNN
+F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 3400 3300 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/d1/cd/3d/18/a2/2c/4e/d0/DM00097745.pdf/files/DM00097745.pdf/jcr:content/translations/en.DM00097745.pdf" H 3400 3300 50  0001 C CNN
+F 4 "497-STM32F334K8T6TR-ND" H 3400 3300 50  0001 C CNN "Digikey"
+	1    3400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0138
+U 1 1 6070A903
+P 900 3800
+F 0 "#PWR0138" H 900 3550 50  0001 C CNN
+F 1 "GND" H 905 3627 50  0000 C CNN
+F 2 "" H 900 3800 50  0001 C CNN
+F 3 "" H 900 3800 50  0001 C CNN
+	1    900  3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C101
+U 1 1 6070A90A
+P 900 3650
+F 0 "C101" H 1015 3696 50  0000 L CNN
+F 1 "1u" H 1015 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 938 3500 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 900 3650 50  0001 C CNN
+F 4 "399-C0603C105K4RAC7411CT-ND" H 900 3650 50  0001 C CNN "Digikey"
+	1    900  3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  3500 1400 3500
+Connection ~ 900  3500
+Connection ~ 1400 1300
+Connection ~ 1900 1300
+Wire Wire Line
+	1900 1300 1400 1300
+Wire Wire Line
+	2250 1300 1900 1300
+$Comp
+L power:GND #PWR0139
+U 1 1 607345DE
+P 1400 1600
+F 0 "#PWR0139" H 1400 1350 50  0001 C CNN
+F 1 "GND" H 1405 1427 50  0000 C CNN
+F 2 "" H 1400 1600 50  0001 C CNN
+F 3 "" H 1400 1600 50  0001 C CNN
+	1    1400 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C201
+U 1 1 607345E5
+P 1400 1450
+F 0 "C201" H 1515 1496 50  0000 L CNN
+F 1 "1u" H 1515 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1438 1300 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 1400 1450 50  0001 C CNN
+F 4 "399-C0603C105K4RAC7411CT-ND" H 1400 1450 50  0001 C CNN "Digikey"
+	1    1400 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0140
+U 1 1 607345EB
+P 1900 1600
+F 0 "#PWR0140" H 1900 1350 50  0001 C CNN
+F 1 "GND" H 1905 1427 50  0000 C CNN
+F 2 "" H 1900 1600 50  0001 C CNN
+F 3 "" H 1900 1600 50  0001 C CNN
+	1    1900 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C202
+U 1 1 607345F2
+P 1900 1450
+F 0 "C202" H 2015 1496 50  0000 L CNN
+F 1 "1u" H 2015 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1938 1300 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 1900 1450 50  0001 C CNN
+F 4 "399-C0603C105K4RAC7411CT-ND" H 1900 1450 50  0001 C CNN "Digikey"
+	1    1900 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  1300 900  1150
+$Comp
+L power:+3.3V #PWR0141
+U 1 1 607345F9
+P 900 1150
+F 0 "#PWR0141" H 900 1000 50  0001 C CNN
+F 1 "+3.3V" H 915 1323 50  0000 C CNN
+F 2 "" H 900 1150 50  0001 C CNN
+F 3 "" H 900 1150 50  0001 C CNN
+	1    900  1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0142
+U 1 1 607345FF
+P 900 1600
+F 0 "#PWR0142" H 900 1350 50  0001 C CNN
+F 1 "GND" H 905 1427 50  0000 C CNN
+F 2 "" H 900 1600 50  0001 C CNN
+F 3 "" H 900 1600 50  0001 C CNN
+	1    900  1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C200
+U 1 1 60734606
+P 900 1450
+F 0 "C200" H 1015 1496 50  0000 L CNN
+F 1 "1u" H 1015 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 938 1300 50  0001 C CNN
+F 3 "https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf" H 900 1450 50  0001 C CNN
+F 4 "399-C0603C105K4RAC7411CT-ND" H 900 1450 50  0001 C CNN "Digikey"
+	1    900  1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  1300 1400 1300
+Connection ~ 900  1300
+Connection ~ 2250 1300
+$Comp
+L power:+3.3V #PWR0143
+U 1 1 6075B1B0
+P 4750 6650
+F 0 "#PWR0143" H 4750 6500 50  0001 C CNN
+F 1 "+3.3V" H 4765 6823 50  0000 C CNN
+F 2 "" H 4750 6650 50  0001 C CNN
+F 3 "" H 4750 6650 50  0001 C CNN
+	1    4750 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 6075B1B7
+P 4750 6800
+F 0 "R5" H 4820 6846 50  0000 L CNN
+F 1 "10k" H 4820 6755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4680 6800 50  0001 C CNN
+F 3 "https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf" H 4750 6800 50  0001 C CNN
+F 4 "RMCF0603FT10K0CT-ND" H 4750 6800 50  0001 C CNN "Digikey"
+	1    4750 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 607686E8
+P 7400 5050
+F 0 "J2" H 7480 5042 50  0000 L CNN
+F 1 "Conn_01x02" H 7480 4951 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Right" H 7400 5050 50  0001 C CNN
+F 3 "https://s3.amazonaws.com/catalogspreads-pdf/PAGE112-113%20.100%20MALE%20HDR.pdf" H 7400 5050 50  0001 C CNN
+F 4 "S1013E-02-ND" H 7400 5050 50  0001 C CNN "Digikey"
+	1    7400 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 4850 2400 4850
+Wire Wire Line
+	2400 4950 2150 4950
+Text GLabel 2150 4850 0    50   Input ~ 0
+PB3_USART2_TX
+Text GLabel 2150 4950 0    50   Input ~ 0
+PB4_USART2_RX
+Wire Wire Line
+	7200 5050 6950 5050
+Wire Wire Line
+	7200 5150 6950 5150
+Text GLabel 6950 5050 0    50   Input ~ 0
+OUT1_MOTOR1
+Text GLabel 6950 5150 0    50   Input ~ 0
+OUT2_MOTOR1
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 607A43D2
+P 7400 5350
+F 0 "J3" H 7480 5342 50  0000 L CNN
+F 1 "Conn_01x02" H 7480 5251 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Right" H 7400 5350 50  0001 C CNN
+F 3 "https://s3.amazonaws.com/catalogspreads-pdf/PAGE112-113%20.100%20MALE%20HDR.pdf" H 7400 5350 50  0001 C CNN
+F 4 "S1013E-02-ND" H 7400 5350 50  0001 C CNN "Digikey"
+	1    7400 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 5350 6950 5350
+Wire Wire Line
+	7200 5450 6950 5450
+Text GLabel 6950 5350 0    50   Input ~ 0
+OUT1_MOTOR2
+Text GLabel 6950 5450 0    50   Input ~ 0
+OUT2_MOTOR2
+$Comp
+L Connector_Generic:Conn_01x03 J4
+U 1 1 607AC8AD
+P 7400 5750
+F 0 "J4" H 7480 5742 50  0000 L CNN
+F 1 "Conn_01x03" H 7480 5651 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical_SMD_Pin1Right" H 7400 5750 50  0001 C CNN
+F 3 "https://drawings-pdf.s3.amazonaws.com/11657.pdf" H 7400 5750 50  0001 C CNN
+F 4 "S1013EC-03-ND" H 7400 5750 50  0001 C CNN "Digikey"
+	1    7400 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 5750 6950 5750
+Wire Wire Line
+	7200 5650 6950 5650
+Text GLabel 6950 5750 0    50   Input ~ 0
+PB3_USART2_TX
+Text GLabel 6950 5650 0    50   Input ~ 0
+PB4_USART2_RX
+$Comp
+L Device:Q_PMOS_GSD Q0
+U 1 1 607059FB
+P 10300 1000
+F 0 "Q0" H 10505 1046 50  0000 L CNN
+F 1 "Q_PMOS_GSD" H 10505 955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10500 1100 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30149.pdf" H 10300 1000 50  0001 C CNN
+F 4 "BSS84-FDICT-ND" H 10300 1000 50  0001 C CNN "Digikey"
+	1    10300 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 4050 2400 4050
+Wire Wire Line
+	7200 5850 7050 5850
+Wire Wire Line
+	7050 5850 7050 6000
+$Comp
+L power:GND #PWR0144
+U 1 1 609ACFD5
+P 7050 6000
+F 0 "#PWR0144" H 7050 5750 50  0001 C CNN
+F 1 "GND" H 7055 5827 50  0000 C CNN
+F 2 "" H 7050 6000 50  0001 C CNN
+F 3 "" H 7050 6000 50  0001 C CNN
+	1    7050 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 6065B8C9
+P 5700 5600
+F 0 "J5" H 5780 5592 50  0000 L CNN
+F 1 "Conn_01x02" H 5780 5501 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x01_P2.54mm_Vertical_SMD" H 5700 5600 50  0001 C CNN
+F 3 "https://s3.amazonaws.com/catalogspreads-pdf/PAGE112-113%20.100%20MALE%20HDR.pdf" H 5700 5600 50  0001 C CNN
+F 4 "S1013E-02-ND" H 5700 5600 50  0001 C CNN "Digikey"
+	1    5700 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 5600 5350 5600
+Wire Wire Line
+	5350 5600 5350 5450
+Wire Wire Line
+	5500 5700 5350 5700
+Wire Wire Line
+	5350 5700 5350 5850
+$Comp
+L power:GND #PWR0145
+U 1 1 60680315
+P 5350 5850
+F 0 "#PWR0145" H 5350 5600 50  0001 C CNN
+F 1 "GND" H 5355 5677 50  0000 C CNN
+F 2 "" H 5350 5850 50  0001 C CNN
+F 3 "" H 5350 5850 50  0001 C CNN
+	1    5350 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0146
+U 1 1 60692002
+P 5350 5450
+F 0 "#PWR0146" H 5350 5300 50  0001 C CNN
+F 1 "VCC" H 5365 5623 50  0000 C CNN
+F 2 "" H 5350 5450 50  0001 C CNN
+F 3 "" H 5350 5450 50  0001 C CNN
+	1    5350 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L flamingo-rescue:LOGO-flamingoLogo-L #G1
+U 1 1 606D1687
+P 6600 7150
+F 0 "#G1" H 6600 6662 60  0001 C CNN
+F 1 "LOGO" H 6600 7638 60  0001 C CNN
+F 2 "" H 6600 7150 50  0001 C CNN
+F 3 "" H 6600 7150 50  0001 C CNN
+	1    6600 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1900 2250 1900
+$Comp
+L power:GND #PWR0147
+U 1 1 6076FA7E
+P 2250 2450
+F 0 "#PWR0147" H 2250 2200 50  0001 C CNN
+F 1 "GND" H 2255 2277 50  0000 C CNN
+F 2 "" H 2250 2450 50  0001 C CNN
+F 3 "" H 2250 2450 50  0001 C CNN
+	1    2250 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 1900 2250 2450
+Wire Wire Line
+	8350 1850 8500 1850
+Wire Wire Line
+	8500 1850 8500 1950
+Connection ~ 8500 1950
+Wire Wire Line
+	8350 3850 8500 3850
+Wire Wire Line
+	8500 3850 8500 3950
+Connection ~ 8500 3950
+$EndSCHEMATC

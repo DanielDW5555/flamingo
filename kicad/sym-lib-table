@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name customIC)(type Legacy)(uri ${KIPRJMOD}/customIC.lib)(options "")(descr ""))
+  (lib (name flamingo-rescue)(type Legacy)(uri ${KIPRJMOD}/flamingo-rescue.lib)(options "")(descr ""))
+)
