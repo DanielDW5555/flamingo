@@ -1,3 +1,4 @@
+# Flamingo
 ![alt text](https://github.com/DanielDW5555/flamingo/blob/main/photos/PCBA.jpg)
 
 This is the first original project I have completed from start to finish. My inspiration for this project was flamingos, and how they are usually seen balanced upright on one leg. The goal of the project was to create a self balancing robot that could stand upright for a short period of time.
